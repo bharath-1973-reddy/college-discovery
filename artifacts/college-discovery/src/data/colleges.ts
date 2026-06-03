@@ -6,6 +6,15 @@ export interface College {
   rating: number;
   established: number;
   type: "Government" | "Private" | "Deemed";
+  rank: number;
+  stream: "Engineering" | "MBA" | "Medical" | "Law" | "Design" | "Science";
+  infrastructure: {
+    library: boolean;
+    hostel: boolean;
+    sports: boolean;
+    labs: number;
+    canteen: boolean;
+  };
   courses: string[];
   placements: {
     averagePackage: number;
@@ -26,6 +35,9 @@ export const colleges: College[] = [
     rating: 4.2,
     established: 1946,
     type: "Government",
+    rank: 85,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 25, canteen: true },
     courses: ["Computer Science", "Electronics & Communication", "Mechanical", "Civil", "Electrical"],
     placements: {
       averagePackage: 4.5,
@@ -47,6 +59,9 @@ export const colleges: College[] = [
     rating: 4.0,
     established: 1998,
     type: "Private",
+    rank: 150,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 20, canteen: true },
     courses: ["Computer Science", "Information Technology", "Artificial Intelligence", "Data Science"],
     placements: {
       averagePackage: 4.0,
@@ -68,6 +83,9 @@ export const colleges: College[] = [
     rating: 4.5,
     established: 2017,
     type: "Private",
+    rank: 64,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 40, canteen: true },
     courses: ["Computer Science", "Software Engineering", "AI & ML", "Robotics", "Cyber Security"],
     placements: {
       averagePackage: 7.2,
@@ -89,6 +107,9 @@ export const colleges: College[] = [
     rating: 4.6,
     established: 2018,
     type: "Deemed",
+    rank: 19,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 35, canteen: true },
     courses: ["Computer Science", "AI & Data Science", "Electronics & Communication", "Computer & Communication Engineering"],
     placements: {
       averagePackage: 8.5,
@@ -109,6 +130,9 @@ export const colleges: College[] = [
     rating: 4.4,
     established: 1997,
     type: "Private",
+    rank: 110,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 30, canteen: true },
     courses: ["Computer Science", "Information Technology", "Electronics & Telematics", "Electrical"],
     placements: {
       averagePackage: 6.0,
@@ -129,6 +153,9 @@ export const colleges: College[] = [
     rating: 4.5,
     established: 1979,
     type: "Private",
+    rank: 55,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 45, canteen: true },
     courses: ["Computer Science", "Artificial Intelligence", "Mechanical", "Civil", "Chemical"],
     placements: {
       averagePackage: 7.5,
@@ -149,6 +176,9 @@ export const colleges: College[] = [
     rating: 4.7,
     established: 1995,
     type: "Private",
+    rank: 82,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 35, canteen: true },
     courses: ["Computer Science", "Data Science", "Cyber Security", "Automobile", "Electronics"],
     placements: {
       averagePackage: 8.0,
@@ -170,6 +200,9 @@ export const colleges: College[] = [
     rating: 4.4,
     established: 2017,
     type: "Private",
+    rank: 70,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 40, canteen: true },
     courses: ["Computer Science", "Mechanical", "Civil", "Electrical", "Bioinformatics"],
     placements: {
       averagePackage: 7.0,
@@ -190,6 +223,9 @@ export const colleges: College[] = [
     rating: 4.3,
     established: 1929,
     type: "Government",
+    rank: 60,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 50, canteen: true },
     courses: ["Computer Science", "Electronics & Communication", "Mechanical", "Civil", "Biomedical"],
     placements: {
       averagePackage: 6.5,
@@ -211,6 +247,9 @@ export const colleges: College[] = [
     rating: 4.1,
     established: 1996,
     type: "Private",
+    rank: 95,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 28, canteen: true },
     courses: ["Computer Science", "Chemical", "Mechanical", "Information Technology"],
     placements: {
       averagePackage: 4.8,
@@ -221,6 +260,351 @@ export const colleges: College[] = [
     overview: "Located in the beautiful city of Vizag, GVPCE is highly rated in the coastal Andhra region. It is known for strong academics and disciplined environment.",
     reviews: [
       { author: "Srinivas K", rating: 4, comment: "Academics are very strict but it pays off during placements.", year: 2023 }
+    ]
+  },
+  {
+    id: 11,
+    name: "Indian Institute of Technology (IIT) Bombay",
+    location: "Mumbai, Maharashtra",
+    fees: 220000,
+    rating: 4.9,
+    established: 1958,
+    type: "Government",
+    rank: 3,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 150, canteen: true },
+    courses: ["Computer Science", "Electrical", "Mechanical", "Civil", "Aerospace"],
+    placements: {
+      averagePackage: 23.0,
+      highestPackage: 150.0,
+      topRecruiters: ["Google", "Microsoft", "Jane Street", "Tower Research"],
+      placementRate: 98
+    },
+    overview: "IIT Bombay is a globally recognized institution for engineering education and research.",
+    reviews: [
+      { author: "Aarav", rating: 5, comment: "Top notch peers and faculty.", year: 2023 }
+    ]
+  },
+  {
+    id: 12,
+    name: "Indian Institute of Management (IIM) Ahmedabad",
+    location: "Ahmedabad, Gujarat",
+    fees: 2500000,
+    rating: 5.0,
+    established: 1961,
+    type: "Government",
+    rank: 1,
+    stream: "MBA",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 10, canteen: true },
+    courses: ["PGP", "PGP-FABM", "ePGP"],
+    placements: {
+      averagePackage: 33.0,
+      highestPackage: 115.0,
+      topRecruiters: ["McKinsey", "BCG", "Bain", "Goldman Sachs"],
+      placementRate: 100
+    },
+    overview: "IIM Ahmedabad is India's premier management institute.",
+    reviews: [
+      { author: "Rohan", rating: 5, comment: "Transformational experience.", year: 2024 }
+    ]
+  },
+  {
+    id: 13,
+    name: "All India Institute of Medical Sciences (AIIMS) Delhi",
+    location: "New Delhi, Delhi",
+    fees: 6000,
+    rating: 4.9,
+    established: 1956,
+    type: "Government",
+    rank: 1,
+    stream: "Medical",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 80, canteen: true },
+    courses: ["MBBS", "BSc Nursing", "MD", "MS"],
+    placements: {
+      averagePackage: 12.0,
+      highestPackage: 24.0,
+      topRecruiters: ["AIIMS", "Apollo", "Max", "Fortis"],
+      placementRate: 100
+    },
+    overview: "AIIMS Delhi is a medical hospital and public medical research university.",
+    reviews: [
+      { author: "Priya", rating: 5, comment: "Best medical college in India.", year: 2023 }
+    ]
+  },
+  {
+    id: 14,
+    name: "National Law University (NLU) Delhi",
+    location: "New Delhi, Delhi",
+    fees: 160000,
+    rating: 4.8,
+    established: 2008,
+    type: "Government",
+    rank: 2,
+    stream: "Law",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 5, canteen: true },
+    courses: ["BA LLB", "LLM", "Ph.D"],
+    placements: {
+      averagePackage: 15.0,
+      highestPackage: 45.0,
+      topRecruiters: ["Cyril Amarchand Mangaldas", "Khaitan & Co", "Trilegal"],
+      placementRate: 95
+    },
+    overview: "NLU Delhi is one of the elite national law schools in India.",
+    reviews: [
+      { author: "Neha", rating: 5, comment: "Excellent moot court culture.", year: 2022 }
+    ]
+  },
+  {
+    id: 15,
+    name: "National Institute of Design (NID) Ahmedabad",
+    location: "Ahmedabad, Gujarat",
+    fees: 300000,
+    rating: 4.9,
+    established: 1961,
+    type: "Government",
+    rank: 1,
+    stream: "Design",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 30, canteen: true },
+    courses: ["B.Des", "M.Des"],
+    placements: {
+      averagePackage: 14.0,
+      highestPackage: 50.0,
+      topRecruiters: ["Microsoft", "Wipro", "TCS", "Infosys"],
+      placementRate: 95
+    },
+    overview: "NID Ahmedabad is internationally acclaimed as one of the finest educational and research institutions for Industrial, Communication, Textile and IT Integrated Design.",
+    reviews: [
+      { author: "Kabir", rating: 5, comment: "The design pedagogy is brilliant.", year: 2023 }
+    ]
+  },
+  {
+    id: 16,
+    name: "Indian Institute of Technology (IIT) Delhi",
+    location: "New Delhi, Delhi",
+    fees: 220000,
+    rating: 4.8,
+    established: 1961,
+    type: "Government",
+    rank: 2,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 140, canteen: true },
+    courses: ["Computer Science", "Mathematics & Computing", "Electrical", "Mechanical"],
+    placements: {
+      averagePackage: 21.0,
+      highestPackage: 140.0,
+      topRecruiters: ["Microsoft", "Google", "Amazon", "Optiver"],
+      placementRate: 97
+    },
+    overview: "IIT Delhi offers world-class education and research opportunities in engineering and technology.",
+    reviews: [
+      { author: "Sahil", rating: 5, comment: "Exceptional environment for tech enthusiasts.", year: 2024 }
+    ]
+  },
+  {
+    id: 17,
+    name: "National Institute of Technology (NIT) Trichy",
+    location: "Tiruchirappalli, Tamil Nadu",
+    fees: 150000,
+    rating: 4.7,
+    established: 1964,
+    type: "Government",
+    rank: 8,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 80, canteen: true },
+    courses: ["Computer Science", "Electronics & Communication", "Electrical", "Mechanical"],
+    placements: {
+      averagePackage: 14.0,
+      highestPackage: 60.0,
+      topRecruiters: ["Google", "Microsoft", "TCS", "L&T"],
+      placementRate: 92
+    },
+    overview: "NIT Trichy is one of the best NITs in India with a strong alumni base.",
+    reviews: [
+      { author: "Manoj", rating: 4, comment: "Top ranking NIT, great placements.", year: 2023 }
+    ]
+  },
+  {
+    id: 18,
+    name: "Birla Institute of Technology and Science (BITS) Pilani",
+    location: "Pilani, Rajasthan",
+    fees: 500000,
+    rating: 4.8,
+    established: 1964,
+    type: "Private",
+    rank: 15,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 100, canteen: true },
+    courses: ["Computer Science", "Electrical", "Mechanical", "Chemical"],
+    placements: {
+      averagePackage: 18.0,
+      highestPackage: 80.0,
+      topRecruiters: ["Amazon", "Google", "Oracle", "Goldman Sachs"],
+      placementRate: 96
+    },
+    overview: "BITS Pilani is a premier private engineering college with a no-attendance policy and a strong startup culture.",
+    reviews: [
+      { author: "Aditi", rating: 5, comment: "The startup culture is unmatched.", year: 2022 }
+    ]
+  },
+  {
+    id: 19,
+    name: "Symbiosis Law School",
+    location: "Pune, Maharashtra",
+    fees: 400000,
+    rating: 4.5,
+    established: 1977,
+    type: "Private",
+    rank: 5,
+    stream: "Law",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 10, canteen: true },
+    courses: ["BA LLB", "BBA LLB", "LLM"],
+    placements: {
+      averagePackage: 10.0,
+      highestPackage: 30.0,
+      topRecruiters: ["AZB & Partners", "Trilegal", "Shardul Amarchand Mangaldas"],
+      placementRate: 85
+    },
+    overview: "A prestigious law school offering comprehensive legal education.",
+    reviews: [
+      { author: "Karan", rating: 4, comment: "Great faculty and mooting culture.", year: 2023 }
+    ]
+  },
+  {
+    id: 20,
+    name: "Manipal College of Medical Sciences",
+    location: "Manipal, Karnataka",
+    fees: 1500000,
+    rating: 4.6,
+    established: 1953,
+    type: "Private",
+    rank: 12,
+    stream: "Medical",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 60, canteen: true },
+    courses: ["MBBS", "MD", "MS"],
+    placements: {
+      averagePackage: 10.0,
+      highestPackage: 20.0,
+      topRecruiters: ["Manipal Hospitals", "Apollo", "Fortis"],
+      placementRate: 98
+    },
+    overview: "Manipal offers top-notch medical facilities and education.",
+    reviews: [
+      { author: "Anjali", rating: 5, comment: "Excellent clinical exposure.", year: 2024 }
+    ]
+  },
+  {
+    id: 21,
+    name: "SP Jain Institute of Management and Research (SPJIMR)",
+    location: "Mumbai, Maharashtra",
+    fees: 2000000,
+    rating: 4.7,
+    established: 1981,
+    type: "Private",
+    rank: 8,
+    stream: "MBA",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 15, canteen: true },
+    courses: ["PGDM", "PGPM", "FMB"],
+    placements: {
+      averagePackage: 28.0,
+      highestPackage: 70.0,
+      topRecruiters: ["Amazon", "Bain", "McKinsey", "HUL"],
+      placementRate: 100
+    },
+    overview: "SPJIMR is one of the top business schools in Mumbai with a unique value-based approach.",
+    reviews: [
+      { author: "Vikram", rating: 5, comment: "Great peer group and placements.", year: 2023 }
+    ]
+  },
+  {
+    id: 22,
+    name: "Indian Institute of Technology (IIT) Madras",
+    location: "Chennai, Tamil Nadu",
+    fees: 210000,
+    rating: 4.9,
+    established: 1959,
+    type: "Government",
+    rank: 1,
+    stream: "Engineering",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 160, canteen: true },
+    courses: ["Computer Science", "Aerospace", "Electrical", "Mechanical"],
+    placements: {
+      averagePackage: 22.0,
+      highestPackage: 130.0,
+      topRecruiters: ["Microsoft", "Google", "Texas Instruments", "Apple"],
+      placementRate: 96
+    },
+    overview: "IIT Madras consistently ranks as the top engineering institute in India.",
+    reviews: [
+      { author: "Siddharth", rating: 5, comment: "Incredible campus inside a national park.", year: 2024 }
+    ]
+  },
+  {
+    id: 23,
+    name: "Christian Medical College (CMC) Vellore",
+    location: "Vellore, Tamil Nadu",
+    fees: 50000,
+    rating: 4.8,
+    established: 1900,
+    type: "Private",
+    rank: 3,
+    stream: "Medical",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 70, canteen: true },
+    courses: ["MBBS", "BSc Nursing", "MD", "MS"],
+    placements: {
+      averagePackage: 10.0,
+      highestPackage: 18.0,
+      topRecruiters: ["CMC Vellore", "Apollo", "Max Healthcare"],
+      placementRate: 100
+    },
+    overview: "CMC Vellore is highly regarded for its commitment to service and medical excellence.",
+    reviews: [
+      { author: "Rachel", rating: 5, comment: "Service-oriented ethos is inspiring.", year: 2023 }
+    ]
+  },
+  {
+    id: 24,
+    name: "National Law School of India University (NLSIU)",
+    location: "Bengaluru, Karnataka",
+    fees: 300000,
+    rating: 4.9,
+    established: 1986,
+    type: "Government",
+    rank: 1,
+    stream: "Law",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 5, canteen: true },
+    courses: ["BA LLB", "LLM", "MPP"],
+    placements: {
+      averagePackage: 16.0,
+      highestPackage: 50.0,
+      topRecruiters: ["Cyril Amarchand Mangaldas", "Khaitan & Co", "L&L Partners"],
+      placementRate: 100
+    },
+    overview: "NLSIU is the premier law university in India.",
+    reviews: [
+      { author: "Amit", rating: 5, comment: "The Oxford of the East for Law.", year: 2024 }
+    ]
+  },
+  {
+    id: 25,
+    name: "Indian Institute of Management (IIM) Bangalore",
+    location: "Bengaluru, Karnataka",
+    fees: 2400000,
+    rating: 4.9,
+    established: 1973,
+    type: "Government",
+    rank: 2,
+    stream: "MBA",
+    infrastructure: { library: true, hostel: true, sports: true, labs: 12, canteen: true },
+    courses: ["PGP", "EPGP", "PGPPM"],
+    placements: {
+      averagePackage: 31.0,
+      highestPackage: 100.0,
+      topRecruiters: ["BCG", "Bain", "McKinsey", "Goldman Sachs"],
+      placementRate: 100
+    },
+    overview: "IIM Bangalore is known for its serene campus and excellent management programs.",
+    reviews: [
+      { author: "Divya", rating: 5, comment: "Amazing faculty and network.", year: 2023 }
     ]
   }
 ];
